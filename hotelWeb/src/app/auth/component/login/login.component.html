@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 offset-3 my-10">
+            <div class="card bg-light text-color-white">
+               <div class="card-header ">
+                <img src="./public/bikesh.jpg" alt="Logo"  class="logo" />
+                <h2>Enter Details</h2>
+               </div>
+               <div class="card-body">
+                <form nz-form [formGroup]="loginForm" class="customer-form" (ngSubmit)="submitForm()">
+                    
+                    <nz-form-item>
+                        <nz-form-control nzErrorTip="Please input your email!">
+                            <nz-input-group nzPrefixIcon="user">
+                                <input type="text" nz-input formControlName="email" placeholder="Enter email" />
+                            </nz-input-group>
+                        </nz-form-control>
+                    </nz-form-item>
+    
+                    
+                    
+                    <nz-form-item>
+                        <nz-form-control nzErrorTip="Please input your password!">
+                            <nz-input-group nzPrefixIcon="lock">
+                                <input type="password" nz-input formControlName="password" placeholder="Enter password" />
+                            </nz-input-group>
+                        </nz-form-control>
+                    </nz-form-item>
+    
+                    <button  nzType="primary" type="submit" class="btn btn-danger" nzBlock [disabled]="loginForm.invalid" class="w-100">
+                        Login
+                    </button>
+    
+                </form>
+               </div> 
+            </div>
+        </div>
+    </div>
+    </div>
